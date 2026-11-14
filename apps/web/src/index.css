@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* DA: bleu turquoise et rouge. */
+@theme {
+  --color-turquoise: #2dd4bf;
+  --color-turquoise-fonce: #0d9488;
+  --color-rouge: #dc2626;
+  --color-rouge-fonce: #991b1b;
+}
+
 @layer base {
   html,
   body {
@@ -8,6 +16,15 @@
 
   body {
     @apply antialiased;
+    /* Fond coupé en diagonale: moitié turquoise, moitié rouge. */
+    background: linear-gradient(
+      135deg,
+      #2dd4bf 0%,
+      #0d9488 50%,
+      #dc2626 50%,
+      #991b1b 100%
+    );
+    background-attachment: fixed;
   }
 }
 
